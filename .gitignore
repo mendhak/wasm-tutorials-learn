@@ -1,0 +1,4 @@
+wasm*
+wasi*
+*.wasm
+*.txt
