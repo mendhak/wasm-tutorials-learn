@@ -2,3 +2,6 @@ wasm*
 wasi*
 *.wasm
 *.txt
+*.tar.gz
+*.tar.xz
+wabt*
