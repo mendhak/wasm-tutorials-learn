@@ -32,11 +32,12 @@ Run the file which copies a file from one place to another.
 
 Directly execute the text. 
 
-    ./wasmtime-v16.0.0-x86_64-linux/wasmtime demo2.wat
+    ./wasmtime-v16.0.0-x86_64-linux/wasmtime simple.wat
 
 Use `wabt` to convert the web assembly text to binary. 
 
     wget https://github.com/WebAssembly/wabt/releases/download/1.0.34/wabt-1.0.34-ubuntu.tar.gz
     tar xf wabt-1.0.34-ubuntu.tar.gz
-    ./wabt-1.0.34/bin/wat2wasm demo2.wat
-    ./wasmtime-v16.0.0-x86_64-linux/wasmtime demo2.wasm
+    ./wabt-1.0.34/bin/wat2wasm simple.wat
+    ./wasmtime-v16.0.0-x86_64-linux/wasmtime simple.wasm
+
