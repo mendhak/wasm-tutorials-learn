@@ -1,7 +1,9 @@
-Following the [WASI tutorial](https://github.com/bytecodealliance/wasmtime/blob/main/docs/WASI-tutorial.md), with some modifications. 
 
 
 ## C
+
+Following the [WASI tutorial](https://github.com/bytecodealliance/wasmtime/blob/main/docs/WASI-tutorial.md), with some modifications. 
+
 
 Basic C code, compiled to wasm with clang, run with wasmtime. 
 
@@ -30,6 +32,8 @@ Run the file which copies a file from one place to another.
 
 ## Web Assembly Text
 
+Following [this MDN tutorial](https://developer.mozilla.org/en-US/docs/WebAssembly/Text_format_to_wasm).
+
 Directly execute the text. 
 
     ./wasmtime-v16.0.0-x86_64-linux/wasmtime simple.wat
@@ -48,6 +52,9 @@ View it in an HTML file
 
 
 ## Using emscripten
+
+
+Following [this MDN tutorial](https://developer.mozilla.org/en-US/docs/WebAssembly/C_to_wasm).
 
 Compile to a packaged HTML, using the emscripten Docker image
 
