@@ -77,3 +77,9 @@ Compile hello3 to a template HTML file using the emscripten docker image
     python3 -m http.server
     firefox http://localhost:8000/output/hello3.html
 
+
+## Todo - Docker = WASM
+
+https://docs.docker.com/engine/alternative-runtimes/#wasmtime
+
+Running WASM in Docker without Docker Desktop.  
