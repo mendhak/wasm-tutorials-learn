@@ -6,7 +6,7 @@
 <body>
 
     <script>
-        const importObject = { imports: { imported_func: (x) => console.log(x) } };
+        const importObject = { imports: { imported_func: (x) => document.write(x) } };
 
         WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
             (obj) => {

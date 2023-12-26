@@ -41,3 +41,32 @@ Use `wabt` to convert the web assembly text to binary.
     ./wabt-1.0.34/bin/wat2wasm simple.wat
     ./wasmtime-v16.0.0-x86_64-linux/wasmtime simple.wasm
 
+View it in an HTML file
+
+    python3 -m http.server
+    firefox http://localhost:8000/simple.html
+
+
+## Using emscripten
+
+Compile to a packaged HTML, using the emscripten Docker image
+
+    docker run --rm -v $(pwd):/src -u $(id -u):$(id -g) emscripten/emsdk emcc hello.c -o hello.html 
+
+Run the resulting HTML file
+    
+    python3 -m http.server
+    firefox http://localhost:8000/output/hello.html
+
+
+Compile to a packaged Node JS file, using the emscripten Docker image
+
+    docker run --rm -v $(pwd):/src -u $(id -u):$(id -g) emscripten/emsdk emcc hello.c -o output/hello2.js
+    node output/hello2.js
+
+Compile hello3 to a template HTML file using the emscripten docker image 
+
+    docker run --rm -v $(pwd):/src -u $(id -u):$(id -g) emscripten/emsdk emcc -o output/hello3.html hello3.c --shell-file shell_minimal.html -s NO_EXIT_RUNTIME=1 -s "EXPORTED_RUNTIME_METHODS=['ccall']"
+    python3 -m http.server
+    firefox http://localhost:8000/output/hello3.html
+
